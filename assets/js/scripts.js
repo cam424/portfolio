@@ -21,9 +21,6 @@ jQuery(document).ready(function() {
     }
   });
 
-  // Portfolio Slideshow
-  jQuery('.portfolio-slider').slick();
-
 });
 
 window.addEventListener('scroll', function(event) {
@@ -42,3 +39,19 @@ window.addEventListener('scroll', function(event) {
     layer.style.transform = translate3d;
   }
 });
+
+// Get the Sequence.js element
+var sequenceElement = document.getElementById("sequence");
+
+// Place your Sequence options here to override defaults
+// See: http://sequencejs.com/documentation/#options
+var options = {
+  animateCanvas: false,
+  phaseThreshold: false,
+  reverseWhenNavigatingBackwards: true,
+  preloader: true
+}
+
+// Launch Sequence on the element, and with the options we specified above
+var mySequence = sequence(sequenceElement, options);
+ 

@@ -7,25 +7,23 @@ Stylesheet: Main Stylesheet
 /*********************
 GENERAL STYLES
 *********************/
-body {
+html {
 	font-size:62.5%;
+}
+body {
+	font-size:1.4rem;
 }
 
 .row {
 	max-width: 120rem;
-	&.row-fw {
-		max-width:none;
-		.row {
-			margin:0 auto;
-		}
+}
+.row-fw {
+	max-width:none;
+	width:100%;
+	.row {
+		margin:0 auto;
 	}
 }
-
-/*********************
-VARIABLES
-*********************/
-$ltgreen: #bdc8c7;
-$heroblue: #3e6f9b;
 
 /*********************
 LINK STYLES

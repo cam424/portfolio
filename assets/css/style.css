@@ -1,11 +1,11 @@
 @charset "UTF-8";
 /******************************************************************
-	
+
 Stylesheet: Main Stylesheet
 
 Here's where the magic happens. Here is where you import
 all of your Sass files so they can compile into one
-CSS file. 
+CSS file.
 
 ******************************************************************/
 /******************************************************************
@@ -19,6 +19,7 @@ Mixins & Constants.
 /*********************
 TOOLS
 *********************/
+@import url("https://fonts.googleapis.com/css?family=Comfortaa:400,700|Patrick+Hand+SC");
 .image-replacement {
   text-indent: 100%;
   white-space: nowrap;
@@ -4332,6 +4333,15 @@ a.thumbnail {
 .clearfix::after {
   clear: both; }
 
+/***************
+Variables
+***************/
+/**************
+Colors
+**************/
+/*************
+Fonts
+*************/
 /************************************************
 
 Stylesheet: Main Stylesheet
@@ -4340,19 +4350,21 @@ Stylesheet: Main Stylesheet
 /*********************
 GENERAL STYLES
 *********************/
-body {
+html {
   font-size: 62.5%; }
+
+body {
+  font-size: 1.4rem; }
 
 .row {
   max-width: 120rem; }
-  .row.row-fw {
-    max-width: none; }
-    .row.row-fw .row {
-      margin: 0 auto; }
 
-/*********************
-VARIABLES
-*********************/
+.row-fw {
+  max-width: none;
+  width: 100%; }
+  .row-fw .row {
+    margin: 0 auto; }
+
 /*********************
 LINK STYLES
 *********************/
@@ -4680,6 +4692,257 @@ PLUGIN STYLES
   list-style: none outside none;
   margin: 0; }
 
+.portfolio {
+  width: 100%;
+  height: 64rem;
+  position: relative;
+  overflow: hidden;
+  background: white; }
+  .portfolio .lines, .portfolio .succulent {
+    position: absolute; }
+  .portfolio .lines.top {
+    top: -7%;
+    right: 5%; }
+  .portfolio .lines.bottom {
+    bottom: -6%;
+    left: 2%; }
+  .portfolio .succulent.top {
+    top: -3.2rem;
+    right: 30%; }
+  .portfolio .succulent.middle {
+    bottom: 10rem;
+    left: 6rem; }
+  .portfolio .succulent.bottom {
+    bottom: -32px;
+    left: 50%; }
+
+.seq {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  font-family: sans-serif;
+  color: white;
+  text-align: center;
+  background-color: transparent;
+  transition-duration: .5s; }
+
+.seq .seq-preloader {
+  background-color: gray;
+  text-align: left; }
+
+.seq .seq-preload-circle {
+  fill: #fff; }
+
+.seq .seq-canvas,
+.seq .seq-canvas > * {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.seq .seq-canvas > * {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: auto;
+  padding: 32px;
+  box-sizing: border-box; }
+
+.seq .seq-orange-overlay {
+  width: 70%;
+  max-width: 100%;
+  height: auto; }
+
+.seq .seq-small-feature {
+  width: 70%;
+  max-width: 100%;
+  height: auto; }
+
+.seq .seq-large-feature {
+  width: 70%;
+  max-width: 100%;
+  height: auto; }
+
+.seq .seq-seq-outline {
+  width: 70%;
+  max-width: 100%;
+  height: auto; }
+
+.seq .seq-valign {
+  /* Remove 4px gap to allow consistent valign */
+  font-size: 0; }
+
+.seq .seq-valign:before {
+  /* Ghost element */
+  content: "";
+  height: 100%; }
+
+.seq .seq-valign:before,
+.seq .seq-valign > .seq-vcenter {
+  /* Vertically align the ghost and desired elements */
+  display: inline-block;
+  vertical-align: middle; }
+
+.seq .seq-valign > .seq-vcenter {
+  /* Reset font-size on valigned elements */
+  font-size: 16px; }
+
+.seq .seq-title {
+  margin: 0;
+  font-size: 1em;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateX(50px) translateZ(0);
+  transition-duration: .5s;
+  transition-property: opacity, transform; }
+
+.seq .seq-feature {
+  transform: translateZ(0) scale(0);
+  transition-property: transform, opacity; }
+
+.seq .seq-orange-overlay {
+  transition-duration: .5s; }
+
+.seq .seq-small-feature {
+  transition-duration: .3s; }
+
+.seq .seq-large-feature {
+  transition-duration: .2s; }
+
+.seq .seq-seq-outline {
+  transition-duration: .1s; }
+
+.seq .seq-in .seq-title {
+  opacity: 1;
+  transform: translateX(0) translateZ(0); }
+
+.seq .seq-in .seq-feature {
+  transform: translateZ(0) scale(1); }
+
+.seq .seq-out .seq-title {
+  opacity: 0;
+  transform: translateX(-50px) translateZ(0); }
+
+.seq .seq-out .seq-feature {
+  transform: translateZ(0) scale(1);
+  opacity: 0; }
+
+.seq .seq-nav {
+  display: none;
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  height: 100%;
+  border: none;
+  margin: 0 auto;
+  padding: 0; }
+  .seq .seq-nav .seq-pagination {
+    display: none;
+    margin: 0 1em;
+    padding: 0;
+    height: 100%; }
+    .seq .seq-nav .seq-pagination li {
+      position: relative;
+      list-style: none;
+      vertical-align: middle;
+      width: 3.5rem;
+      height: 3.5rem;
+      margin: 0.8rem 5.5rem 0.8em 0; }
+    .seq .seq-nav .seq-pagination .seq-current:before {
+      opacity: .7; }
+    .seq .seq-nav .seq-pagination img,
+    .seq .seq-nav .seq-pagination a {
+      display: block; }
+    .seq .seq-nav .seq-pagination img {
+      border: none; }
+    .seq .seq-nav .seq-pagination a {
+      font-family: "Patrick Hand SC", cursive;
+      font-size: 1.6rem;
+      letter-spacing: .1em;
+      color: #101c23;
+      border: solid 0.3rem #101c23;
+      border-radius: 50%;
+      width: 3.5rem;
+      height: 3.5rem;
+      padding-top: 0.2rem; }
+
+.seq.seq-active {
+  /* Show navigation when JS is enabled */ }
+
+.seq.seq-active .seq-nav {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center; }
+  .seq.seq-active .seq-nav .seq-pagination {
+    display: block; }
+
+.seq .seq-next,
+.seq .seq-prev {
+  display: none !important;
+  position: absolute;
+  margin-top: -20px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  padding: .75em;
+  cursor: pointer;
+  color: white;
+  font-size: .75em;
+  text-transform: uppercase;
+  opacity: .7;
+  transition-duration: .25s;
+  transition-property: opacity; }
+  .seq .seq-next:hover,
+  .seq .seq-prev:hover {
+    opacity: 1; }
+
+.seq .seq-next {
+  right: .625em; }
+
+.seq .seq-prev {
+  left: .625em; }
+
+@media only screen and (min-width: 460px) {
+  .seq .seq-feature {
+    max-height: 50vh;
+    width: auto;
+    max-width: 100%;
+    height: auto; } }
+
+@media only screen and (min-width: 320px) and (min-height: 320px) {
+  .seq .seq-canvas > * {
+    bottom: 80px;
+    bottom: 5rem; }
+  .seq .seq-title {
+    font-size: 1.4em; }
+  .seq .seq-next,
+  .seq .seq-prev,
+  .seq .seq-pagination {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 0; }
+  .seq .seq-pagination {
+    /*
+     * Show the pagination
+     */
+    display: inline-block; } }
+
+@media only screen and (min-height: 480px) {
+  .seq .seq-feature {
+    /*
+     * The image can now become its full native height
+     */
+    max-height: 100%; } }
+
+/*# sourceMappingURL=sequence-theme.mono.css.map */
 /******************************************************************
 
 Stylesheet: Retina Screens & Devices Stylesheet

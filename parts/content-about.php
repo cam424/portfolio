@@ -1,4 +1,4 @@
-<div class="about section row" id="section1">
+<div class="about section row-fw" id="section1">
 
   <div class="large-3 columns">
     <h2>About</h2>
