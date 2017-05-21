@@ -6,9 +6,32 @@ Variables
 Colors
 **************/
 
+$dkgreen: #1d4e5f;
 $dkblue: #101c23;
 $ltgreen: #bdc8c7;
+$ltblue: #e8eef5;
 $heroblue: #3e6f9b;
+$offblack: #060707;
+
+.dkgreen {
+  background:$dkgreen;
+}
+.dkblue {
+  background:$dkblue;
+}
+.ltgreen {
+  background:$ltgreen;
+}
+.ltblue {
+  background:$ltblue;
+}
+.heroblue {
+  background:$heroblue;
+}
+.offblack {
+  background:$offblack;
+}
+
 
 /*************
 Fonts

@@ -1,4 +1,4 @@
-<div class="portfolio section row-fw" id="section2">
+<div class="portfolio section row row-fw" id="section2">
   <img class="lines top" src="wp-content/themes/JointsWP-master/assets/images/portfolio/lines.png" />
   <img class="lines bottom" src="wp-content/themes/JointsWP-master/assets/images/portfolio/lines.png" />
   <img class="succulent top" src="wp-content/themes/JointsWP-master/assets/images/portfolio/succulent.png" />
@@ -6,6 +6,9 @@
   <img class="succulent bottom" src="wp-content/themes/JointsWP-master/assets/images/portfolio/succulent.png" />
 
   <div id="sequence" class="seq">
+    <div class="sequence-title">
+      <h2>Selected Work</h2>
+    </div>
     <ul class="seq-canvas">
 
       <li class="seq-step1 seq-valign seq-in">

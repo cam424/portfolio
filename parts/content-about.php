@@ -1,6 +1,6 @@
-<div class="about section row-fw" id="section1">
+<div class="about section row row-fw" id="section1">
 
-  <div class="large-3 columns">
+  <div class="large-3 large-text-right text-center columns">
     <h2>About</h2>
   </div>
   <div class="large-6 columns">
@@ -9,7 +9,7 @@
       </p>
     </div>
   </div>
-  <div class="large-3 columns">
+  <div class="large-3 columns social">
     <ul>
       <li>
         <a href="https://www.linkedin.com/in/courtneymohr" target="_blank" title="Linkedin">

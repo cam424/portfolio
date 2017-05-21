@@ -59,4 +59,10 @@ CSS3 GRADIENTS.
 	background-image: linear-gradient(to bottom, $from, $to);
 }
 
-
+/* @include transition */
+@mixin animate($details...) {
+	-webkit-transition: $details;
+	-moz-transition: $details;
+	-o-transition: $details;
+	transition: $details;
+}

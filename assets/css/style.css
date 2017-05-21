@@ -50,6 +50,7 @@ span.amp {
 CSS3 GRADIENTS.
 *********************/
 /* @include css-gradient(#dfdfdf,#f8f8f8); */
+/* @include transition */
 /**
  * Foundation for Sites by ZURB
  * Version 6.3.0
@@ -4339,6 +4340,24 @@ Variables
 /**************
 Colors
 **************/
+.dkgreen {
+  background: #1d4e5f; }
+
+.dkblue {
+  background: #101c23; }
+
+.ltgreen {
+  background: #bdc8c7; }
+
+.ltblue {
+  background: #e8eef5; }
+
+.heroblue {
+  background: #3e6f9b; }
+
+.offblack {
+  background: #060707; }
+
 /*************
 Fonts
 *************/
@@ -4365,6 +4384,18 @@ body {
   .row-fw .row {
     margin: 0 auto; }
 
+#section1,
+.sequence-title,
+#section4 {
+  padding: 5rem 2rem; }
+  #section1 h2,
+  .sequence-title h2,
+  #section4 h2 {
+    border-top: solid 0.3rem #060707;
+    display: inline;
+    padding-left: 1.4rem;
+    margin-right: 4rem; }
+
 /*********************
 LINK STYLES
 *********************/
@@ -4376,6 +4407,19 @@ H1, H2, H3, H4, H5 P STYLES
 *********************/
 h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a {
   text-decoration: none; }
+
+h2, .h2 {
+  font-family: "Patrick Hand SC", cursive;
+  font-size: 3rem;
+  letter-spacing: 0.2em;
+  color: #060707; }
+
+p, span, li {
+  font-family: "Comfortaa", sans-serif;
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  letter-spacing: 0.2rem;
+  color: #060707; }
 
 /*********************
 HEADER STYLES
@@ -4400,7 +4444,7 @@ NAVIGATION STYLES
     margin-left: 20px; }
 
 /*********************
-HERO
+HOME - HERO
 *********************/
 #hero {
   height: 100vh;
@@ -4461,16 +4505,44 @@ HERO
   background: #3e6f9b; }
 
 /*********************
+HOME - ABOUT
+*********************/
+.social ul {
+  border-top: solid 0.3rem #060707;
+  display: inline-block;
+  list-style-type: none;
+  padding-top: 0.9rem; }
+  .social ul li {
+    font-family: "Patrick Hand SC", cursive;
+    font-size: 1.8rem;
+    margin-bottom: 2rem; }
+    .social ul li a {
+      color: #060707;
+      transition: linear 0.3s all; }
+      .social ul li a i {
+        font-size: 2.5rem;
+        position: relative;
+        top: 0.3rem;
+        margin-right: 1.6rem; }
+      .social ul li a:hover, .social ul li a:focus {
+        opacity: 0.5; }
+
+/*********************
+HOME - Portfolio
+*********************/
+/*********************
+HOME - Resume
+*********************/
+/*********************
+HOME - Contact
+*********************/
+/*********************
 POSTS & CONTENT STYLES
 *********************/
 #content #inner-content {
   padding: 0; }
   #content #inner-content #main {
     padding: 0; }
-
-#section1 {
-  background: #bdc8c7;
-  min-height: 100vh; }
 
 .page-title .vcard {
   border: 0px;
